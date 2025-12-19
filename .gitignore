@@ -1,3 +1,6 @@
+# Store inputs from the AoC challenges here
+inputs/*.txt
+
 # Devenv
 .devenv*
 devenv.local.nix
