@@ -7,8 +7,53 @@ requires-python = ">=3.13"
 dependencies = []
 
 [dependency-groups]
-dev = [
-    "basedpyright>=1.36.1",
-    "mypy>=1.19.1",
-    "ruff>=0.14.10",
+dev = ["basedpyright>=1.36.1", "mypy>=1.19.1", "ruff>=0.14.10"]
+
+[tools.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+ignore = [
+  # Conflicting lint rules - these conflict with the Ruff formatter
+  # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
+  "W191",
+  "E111",
+  "E114",
+  "E117",
+  "D206",
+  "D300",
+  "Q000",
+  "Q001",
+  "Q002",
+  "Q003",
+  "COM812",
+  "COM812",
+  "ISC002",
+
+  # Disabled for now because it applies to ValueError and RuntimeError.
+  # There is an open issue to the Ruff developers to make this list
+  # configurable.
+  # https://github.com/astral-sh/ruff/issues/14398
+  "TRY003",
 ]
+select = [
+  "B",    # flake8-bugbear
+  "C901", # McCabe complexity
+  "D",    # pydocstyle
+  "E",    # pycodestyle error
+  "F",    # pyflakes
+  "FIX",  # flake8-fixme
+  "I",    # isort
+  "N",    # pep8-naming
+  "PL",   # pylint
+  "RUF",  # ruff
+  "S",    # flake8-bandit
+  "TRY",  # tryceratops
+  "W",    # pycodestyle warning
+]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
