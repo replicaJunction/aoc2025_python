@@ -31,8 +31,10 @@
 
   # https://devenv.sh/basics/
   enterShell = ''
-    hello         # Run scripts directly
-    git --version # Use packages
+    hello
+    git --version
+    python --version
+    uv --version
   '';
 
   # https://devenv.sh/tasks/
