@@ -12,7 +12,10 @@
   packages = [pkgs.git];
 
   # https://devenv.sh/languages/
-  # languages.rust.enable = true;
+  languages.python = {
+    enable = true;
+    package = pkgs.python313;
+  };
 
   # https://devenv.sh/processes/
   # processes.dev.exec = "${lib.getExe pkgs.watchexec} -n -- ls -la";
