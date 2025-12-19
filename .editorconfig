@@ -1,0 +1,21 @@
+# https://editorconfig.org
+
+[*]
+end_of_line = lf
+
+[*.txt]
+charset = utf-8
+insert_final_newline = false
+trim_trailing_whitespace = true
+
+[*.py]
+charset = utf-8
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{toml|yml|yaml|json}]
+charset = utf-8
+indent_style = space
+indent_size = 2
