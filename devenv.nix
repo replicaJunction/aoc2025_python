@@ -15,6 +15,7 @@
   languages.python = {
     enable = true;
     package = pkgs.python313;
+    uv.enable = true;
   };
 
   # https://devenv.sh/processes/
