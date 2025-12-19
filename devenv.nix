@@ -25,6 +25,7 @@
   # services.postgres.enable = true;
 
   # https://devenv.sh/scripts/
+  scripts.edit.exec = "uv run nvim .";
   scripts.hello.exec = ''
     echo hello from $GREET
   '';
